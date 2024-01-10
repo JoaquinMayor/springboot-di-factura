@@ -17,7 +17,7 @@ public class InvoiceController {
     
     @GetMapping("/show")
     public Invoice show(){
-        Invoice i = new Invoice(); //Se crean unas copias porque son componentes del requestScope ya que al json le agrega varios atributos que no interesan pasar
+        Invoice i = new Invoice(); //Se crean unas copias porque son componentes del requestScope, ya que al json le agrega varios atributos que no interesan pasar
         Client c = new Client();
         c.setLastaname(invoice.getClient().getLastaname());
         c.setName(invoice.getClient().getName());
